@@ -2,19 +2,22 @@
  * @Author: BINGWU
  * @Date: 2024-07-26 10:56:41
  * @LastEditors: hujiacheng hujiacheng@iipcloud.com
- * @LastEditTime: 2024-07-26 10:58:00
- * @FilePath: \my-app\app.js
+ * @LastEditTime: 2024-07-26 11:42:18
+ * @FilePath: \my-app\index.js
  * @Describe: 
  * @Mark: ૮(˶ᵔ ᵕ ᵔ˶)ა
  */
 const express = require('express')
 const app = express()
 const port = 8888
-
+const cors = require('cors')
+app.use(cors()) /
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-
+app.get('/vvv', (req, res) => {
+  res.send('Hello World!vvv')
+})
 
 // GET 请求，获取单个项目
 app.get('/api/items/:id', (req, res) => {

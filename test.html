@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios-test</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <script>
+    const baseUrl = 'https://my-app-nine-ashen.vercel.app/api/items'
+    axios({
+      method: 'get',
+      url: baseUrl + '/1111'
+    })
+    axios({
+      method: 'post',
+      url: baseUrl,
+      data: {
+        id: '1111',
+        price: 1000
+      }
+    });
+    axios({
+      method: 'put',
+      url: baseUrl + '/1111',
+      data: {
+        price: 2000
+      }
+    });
+    axios({
+      method: 'delete',
+      url: baseUrl + '/1111'
+    });
+  </script>
+</body>
+
+</html>
